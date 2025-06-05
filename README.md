@@ -46,5 +46,5 @@ The SQL query was written with standardized naming conventions and inline commen
 ├── 📁 docs/
 │   └── monthly_sales_summary_TRD.md  # Technical Requirement Document
 ├── 📁 notebooks/
-│   └── monthly_sales_summary_analysis.ipynb  # (Optional) Python visualization
+│   └── monthly_sales_summary_analysis.ipynb  # Python visualization
 └── README.md

@@ -2,13 +2,12 @@
 
 ## Project Overview
 
-This project simulates a real-world reporting pipeline for a data warehouse environment. It includes a standardized SQL reporting structure, technical requirement documentation (TRD), and Python-based data visualizations.
+This project simulates a real-world reporting pipeline for a data warehouse environment. It includes a standardized SQL reporting structure, technical requirement documentation (TRD)
 
 The goal is to showcase my ability to:
 - Design and execute analytical queries with clean and maintainable SQL code
 - Document business logic in a Technical Requirement Document (TRD)
 - Apply reporting best practices, such as consistent naming conventions and field definitions
-- Communicate insights visually through Python
 
 ---
 
@@ -45,6 +44,4 @@ The SQL query was written with standardized naming conventions and inline commen
 │   └── monthly_sales_summary.sql   # Standardized SQL query
 ├── 📁 docs/
 │   └── monthly_sales_summary_TRD.md  # Technical Requirement Document
-├── 📁 notebooks/
-│   └── monthly_sales_summary_analysis.ipynb  # Python visualization
 └── README.md

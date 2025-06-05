@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project simulates a real-world reporting pipeline for a data warehouse environment. It includes a standardized SQL reporting structure, technical requirement documentation (TRD), and optional Python-based data visualizations.
+This project simulates a real-world reporting pipeline for a data warehouse environment. It includes a standardized SQL reporting structure, technical requirement documentation (TRD), and Python-based data visualizations.
 
 The goal is to showcase my ability to:
 - Design and execute analytical queries with clean and maintainable SQL code

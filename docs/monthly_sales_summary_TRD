@@ -1,0 +1,37 @@
+📄 TRD: Monthly Sales Summary Report
+🧾 Report Name
+Monthly Sales Summary
+
+Business Objective
+This report provides the business team with a monthly overview of overall sales performance. Key metrics include total revenue and number of orders. By monitoring monthly trends, management can quickly identify peak and low sales periods, as well as evaluate the impact of promotions and seasonal factors.
+
+Data Sources
+Table Name	Description
+orders_table	Main order table containing order date, customer ID, and other header info
+order_items_table	Line items for each order, including product and quantity
+products_table	Product catalog with pricing and category information
+
+Logic & Transformations
+Revenue Calculation:
+revenue = quantity × price
+Revenue is computed by joining order_items_table with products_table, calculating the line item subtotal, then aggregating by order.
+
+Monthly Grouping:
+Use DATE_FORMAT(order_date, '%Y-%m') to extract the month for trend tracking and budget comparisons.
+
+Order Count:
+Use COUNT(DISTINCT order_id) to calculate the number of unique orders, eliminating duplicates or multi-item order effects.
+
+Output Fields
+Field Name	Type	Description
+order_month	TEXT	Grouped month (format: YYYY-MM)
+total_revenue	DECIMAL	Total revenue per month (in USD)
+total_orders	INT	Number of unique orders placed in the month
+
+Refresh Frequency
+Automatically refreshed on the 1st of each month to reflect the previous month’s performance. Can be extended in the future to support weekly or daily aggregations.
+
+Notes
+This report currently includes only completed orders. If order status is added in the future, apply a filter such as WHERE status = 'Completed'.
+
+To analyze sales by category, consider grouping additionally by product_category.

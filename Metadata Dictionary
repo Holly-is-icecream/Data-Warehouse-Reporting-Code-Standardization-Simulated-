@@ -1,0 +1,35 @@
+Metadata Dictionary – Monthly Sales Summary Report
+Data Sources
+This report uses three core tables:
+
+orders_table – Contains order-level information such as order_date and order_id
+
+order_items_table – Contains item-level transaction records including quantity and product IDs
+
+products_table – Product catalog with price and product metadata
+
+Table & Field Definitions
+orders_table
+Field Name	Data Type	Description
+order_id	INT	Unique identifier for each order
+order_date	DATE	Date when the order was placed
+
+order_items_table
+Field Name	Data Type	Description
+order_id	INT	Foreign key linking to orders_table
+product_id	INT	Foreign key linking to products_table
+quantity	INT	Quantity of the product purchased in the order
+
+products_table
+Field Name	Data Type	Description
+product_id	INT	Unique identifier for each product
+price	DECIMAL	Unit price of the product
+
+Report Output Fields
+Field Name	Data Type	Description
+order_month	TEXT	Month extracted from order_date in YYYY-MM format
+total_revenue	DECIMAL	Monthly revenue = SUM(quantity × price)
+total_orders	INT	Count of distinct order_id per month
+
+Refresh Frequency
+This report is designed to refresh automatically on the 1st of each month, providing a review of the previous month’s sales performance.
